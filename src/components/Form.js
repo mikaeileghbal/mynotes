@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import FormStyles from "./styles/FormStyles";
 
 const Form = ({ add, edit }) => {
@@ -16,9 +16,13 @@ const Form = ({ add, edit }) => {
       text: fields.todo,
       done: false,
     };
-
     add(newTodo);
+    setFields({ ...fields, todo: "" });
   };
+
+  useEffect(() => {
+    //console.log(fields);
+  });
 
   return (
     <FormStyles>

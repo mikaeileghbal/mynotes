@@ -10,11 +10,13 @@ const App = () => {
   const dataSource = new DataSource();
 
   const add = (todo) => {
-    setTodos(dataSource.Add(todo));
+    dataSource.Add(todo);
+    getAllTodos();
   };
 
   const remove = (id) => {
-    console.log(id);
+    dataSource.Remove(id);
+    getAllTodos();
   };
 
   const edit = (todo) => {};
@@ -22,6 +24,7 @@ const App = () => {
   const setDone = (done) => {};
 
   const getAllTodos = () => {
+    console.log("Loading data");
     setTodos(dataSource.GetAll());
   };
 
