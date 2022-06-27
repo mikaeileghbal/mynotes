@@ -1,18 +1,14 @@
 import React from "react";
+import { useTodoContext } from "../App";
 import TodoStyles from "./styles/TodoStyles";
 
-const TodoList = ({ todos, remove, edit, setDone }) => {
+const TodoList = () => {
+  const { todos } = useTodoContext();
   return (
     <TodoStyles>
       <h3>Todo List</h3>
       {todos.map((todo) => (
-        <TodoItem
-          key={todo.text}
-          todo={todo}
-          remove={remove}
-          edit={edit}
-          setDone={setDone}
-        />
+        <TodoItem key={todo.text} todo={todo} />
       ))}
     </TodoStyles>
   );
@@ -20,7 +16,9 @@ const TodoList = ({ todos, remove, edit, setDone }) => {
 
 export default TodoList;
 
-const TodoItem = ({ todo, edit, remove, setDone }) => {
+const TodoItem = ({ todo }) => {
+  const { edit, remove, setDone } = useTodoContext();
+
   return (
     <div className="todo">
       <h4>{todo.text} </h4>

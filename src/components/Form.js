@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
+import { useTodoContext } from "../App";
 import FormStyles from "./styles/FormStyles";
 
-const Form = ({ add, edit }) => {
+const Form = () => {
   const [fields, setFields] = useState({
     todo: "",
   });
+
+  const { add } = useTodoContext();
 
   const onInputChange = (event) => {
     const newFields = { ...fields, [event.target.name]: event.target.value };
