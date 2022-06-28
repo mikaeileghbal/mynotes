@@ -10,4 +10,13 @@ function isDataAvailable() {
   return localStorage["todos"];
 }
 
-export { saveToStorage, loadFromStorage, isDataAvailable };
+function random() {
+  return Math.floor(Math.random() * 2);
+}
+
+function getNoteBackColor() {
+  const colors = ["#FFE900", "#1CE8B5"];
+  return colors[random()];
+}
+
+export { saveToStorage, loadFromStorage, isDataAvailable, getNoteBackColor };
