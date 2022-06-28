@@ -1,7 +1,7 @@
 const data = [
   {
     id: 1,
-    text: "Meeting",
+    text: "Surprise party for Kristen!",
     done: false,
   },
   {

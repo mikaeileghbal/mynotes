@@ -4,7 +4,11 @@ import HeaderStyles from "./styles/HeaderStyles";
 const Header = () => {
   return (
     <HeaderStyles>
-      <h2>Note Daily Tasks</h2>
+      <header>Note Daily Tasks</header>
+      <section>
+        <h2>Capture what's on your mind</h2>
+        <p>Add notes and lists to keep</p>
+      </section>
     </HeaderStyles>
   );
 };
