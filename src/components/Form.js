@@ -40,7 +40,7 @@ const Form = () => {
             onChange={onInputChange}
             placeholder="Take a note..."
           />
-          <button type="button" onClick={handleAdd}>
+          <button type="button" onClick={handleAdd} className="btn">
             <FaPen />
           </button>
         </form>

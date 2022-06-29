@@ -3,25 +3,33 @@ import { FaArrowCircleRight } from "react-icons/fa";
 import MenuStyles from "./styles/MenuStyles";
 import { Footer } from "../components";
 
-const menuItems = ["Mote 1", "Note 2", "Note 3", "Note 4"];
-const MainMenu = () => {
-  const [active, setActive] = useState(0);
+const menuItems = [
+  { text: "Menu 1", id: 1 },
+  { text: "Meny 2", id: 2 },
+  { text: "Menu 3", id: 3 },
+  { text: "Menu 4", id: 4 },
+];
 
-  const onClick = (event) => {
-    setActive(event.target.key);
+const MainMenu = () => {
+  const [active, setActive] = useState(1);
+
+  const onClick = (id) => {
+    console.log(id);
+    setActive(id);
   };
 
   return (
     <MenuStyles>
       {menuItems.map((item) => (
         <button
-          key={item}
-          className={active === item ? "menu-item active" : "menu-item"}
+          key={item.id}
+          className={active === item.id ? "menu-item active" : "menu-item"}
+          onClick={() => onClick(item.id)}
         >
           <FaArrowCircleRight
             style={{ marginRight: "2.25rem", color: "#ffea00" }}
           />
-          {item}
+          {item.text}
         </button>
       ))}
     </MenuStyles>

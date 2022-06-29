@@ -9,6 +9,7 @@ const MenuStyles = styled.div`
   flex-direction: column;
   padding: 0.5rem 0;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+
   .menu-item {
     font-family: "Open Sans", sans-serif;
     background: white;
@@ -24,8 +25,11 @@ const MenuStyles = styled.div`
     align-items: center;
 
     &:hover {
-      background: silver;
+      background: #ababab66;
     }
+  }
+  .menu-item.active {
+    background-color: #ababab;
   }
 `;
 
