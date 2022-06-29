@@ -28,12 +28,18 @@ const DataProvider = ({ children }) => {
     setTodos(dataSource.GetAll());
   };
 
+  const searchTodo = (term) => {
+    setTodos(dataSource.SearchTodo(term));
+  };
+
   useEffect(() => {
     getAllTodos();
   }, []);
 
   return (
-    <TodoContext.Provider value={{ todos, add, remove, edit, setDone }}>
+    <TodoContext.Provider
+      value={{ todos, add, remove, edit, setDone, searchTodo }}
+    >
       {children}
     </TodoContext.Provider>
   );

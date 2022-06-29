@@ -1,6 +1,7 @@
 import React from "react";
+import { FaEdit, FaTimes } from "react-icons/fa";
 import { useTodoContext } from "../api/DataProvider";
-import { getNoteBackColor } from "../helper";
+import { getNoteBackColor, NoteBackColor } from "../helper";
 import TodoStyles, { TodoItemStyles } from "./styles/TodoStyles";
 
 const TodoList = () => {
@@ -23,7 +24,7 @@ const TodoItem = ({ todo }) => {
 
   return (
     <div className="wrapper">
-      <TodoItemStyles bgColor={getNoteBackColor()}>
+      <TodoItemStyles bgColor={NoteBackColor.events}>
         <h4>{todo.text} </h4>
         <div className="footer">
           <span>Reminder at 8:00 PM, Jun 19</span>
@@ -35,14 +36,14 @@ const TodoItem = ({ todo }) => {
           className="btn btn-warning"
           onClick={() => edit(todo.id)}
         >
-          Edit
+          <FaEdit />
         </button>
         <button
           type="button"
           className="btn btn-danger"
           onClick={() => remove(todo.id)}
         >
-          Remove
+          <FaTimes />
         </button>
       </div>
     </div>

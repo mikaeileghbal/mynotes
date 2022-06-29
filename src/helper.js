@@ -14,9 +14,9 @@ function random() {
   return Math.floor(Math.random() * 2);
 }
 
-function getNoteBackColor() {
-  const colors = ["#FFE900", "#1CE8B5"];
-  return colors[random()];
-}
+const NoteBackColor = {
+  events: "#FFE900",
+  meetings: "#1CE8B5",
+};
 
-export { saveToStorage, loadFromStorage, isDataAvailable, getNoteBackColor };
+export { saveToStorage, loadFromStorage, isDataAvailable, NoteBackColor };

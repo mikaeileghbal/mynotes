@@ -35,6 +35,12 @@ function DataSource() {
     );
     saveData();
   };
+
+  this.SearchTodo = function (term) {
+    return todos.filter((todo) =>
+      todo.text.toLowerCase().includes(term.toLowerCase())
+    );
+  };
 }
 
 export default DataSource;

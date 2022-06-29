@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 const TodoStyles = styled.section`
-  padding: 0.5em 5em;
-
   .row {
     margin: 0 auto;
     display: grid;
@@ -44,18 +42,25 @@ const TodoStyles = styled.section`
   }
 
   .btn {
-    padding: 8px 12px;
+    background: white;
+    padding: 8px;
+    width: 30px;
+    height: 30px;
     border: none;
     margin: 0.25em;
-    color: white;
+    color: #968d8d;
     cursor: pointer;
+    border-radius: 50%;
+  }
+
+  .btn:hover {
+    background: #968d8d;
+    color: white;
   }
 
   .btn-warning {
-    background-color: #968d8d;
   }
   .btn-danger {
-    background-color: rgb(230, 10, 20);
   }
 
   .note {

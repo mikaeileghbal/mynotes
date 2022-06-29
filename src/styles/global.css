@@ -12,4 +12,22 @@
 
 section {
   color: #968d8d;
+  padding-left: 280px;
+}
+
+.btn {
+  background: transparent;
+  padding: 8px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  margin: 0.25em;
+  color: #968d8d;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.btn:hover {
+  background: #968d8d;
+  color: white;
 }
