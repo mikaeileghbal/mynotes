@@ -5,7 +5,7 @@ const HeaderStyles = styled.div`
     z-index: 10;
     background-color: white;
     padding: 0.6rem 2rem;
-    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.13);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     position: fixed;
     width: 100%;
     display: grid;
@@ -54,7 +54,6 @@ const HeaderStyles = styled.div`
   .input-group {
     background-color: #ffea00;
     border-radius: 0.5rem;
-    display: inline-block;
     padding: 0 0.5rem 0 1rem;
     display: inline-flex;
     align-items: center;
@@ -76,12 +75,11 @@ const HeaderStyles = styled.div`
     padding: 14px 10px;
     border: none;
     outline: none;
-    width: 400px;
+    width: 500px;
     transition: width 0.3s ease;
   }
 
   input:focus {
-    width: 500px;
   }
 `;
 

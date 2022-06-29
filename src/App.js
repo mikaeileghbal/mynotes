@@ -2,9 +2,8 @@ import React from "react";
 import GlobalStyles from "./components/styles/GlobalStyles";
 
 import DataSource from "./api/dataSource";
-import { Header, Footer, Form, TodoList } from "./components";
+import { Header, TodoList, MainMenu, Form } from "./components";
 import DataProvider from "./api/DataProvider";
-import MainMenu from "./components/MainMenu";
 
 const App = () => {
   return (
@@ -13,10 +12,9 @@ const App = () => {
         <Header />
         {/* <Form add={add} edit={edit} />
         <TodoList todos={todos} remove={remove} setDone={setDone} edit={edit} /> */}
-        {/* <Form /> */}
+        <Form />
         <MainMenu />
         <TodoList />
-        <Footer />
       </GlobalStyles>
     </DataProvider>
   );

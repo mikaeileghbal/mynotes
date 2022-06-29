@@ -23,16 +23,11 @@ const Header = () => {
 export default Header;
 
 function Search() {
-  const [searchTerm, setSearchTerm] = useState("");
-  const { searchTodo } = useTodoContext();
+  const { searchTerm, searchTermChange } = useTodoContext();
 
-  const onSearchChange = (event) => {
-    setSearchTerm(event.target.value);
+  const onCancel = (event) => {
+    searchTermChange("");
   };
-
-  useEffect(() => {
-    searchTodo(searchTerm);
-  }, [searchTerm]);
 
   return (
     <div className="search-wrapper">
@@ -47,9 +42,9 @@ function Search() {
           placeholder="Search..."
           autoComplete="false"
           value={searchTerm}
-          onChange={onSearchChange}
+          onChange={(event) => searchTermChange(event.target.value)}
         />
-        <button type="button" className="btn">
+        <button type="button" className="btn" onClick={onCancel}>
           <FaTimes style={{ cursor: "pointer" }} />
         </button>
       </div>

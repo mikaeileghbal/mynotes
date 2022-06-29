@@ -8,7 +8,7 @@ const MenuStyles = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0.5rem 0;
-
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   .menu-item {
     font-family: "Open Sans", sans-serif;
     background: white;

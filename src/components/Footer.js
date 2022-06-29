@@ -6,6 +6,9 @@ const FooterStyles = styled.footer`
   background-color: #f5f5f5;
   font-size: 0.5rem;
   color: #8a8a8a;
+  position: absolute;
+  left: 0;
+  top: 80%;
 `;
 
 const Footer = () => {

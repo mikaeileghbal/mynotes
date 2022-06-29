@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { FaPen, FaSave } from "react-icons/fa";
 import { useTodoContext } from "../api/DataProvider";
 import FormStyles from "./styles/FormStyles";
 
@@ -29,20 +30,21 @@ const Form = () => {
 
   return (
     <FormStyles>
-      <h1>My TODO List</h1>
-      <form>
-        <label htmlFor="todo">Todo</label>
-        <input
-          type="text"
-          name="todo"
-          id="todo"
-          value={fields.todo}
-          onChange={onInputChange}
-        />
-        <button type="button" onClick={handleAdd}>
-          Save
-        </button>
-      </form>
+      <div className="form-wrapper">
+        <form>
+          <input
+            type="text"
+            name="todo"
+            id="todo"
+            value={fields.todo}
+            onChange={onInputChange}
+            placeholder="Take a note..."
+          />
+          <button type="button" onClick={handleAdd}>
+            <FaPen />
+          </button>
+        </form>
+      </div>
     </FormStyles>
   );
 };
