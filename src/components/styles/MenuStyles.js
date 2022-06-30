@@ -25,11 +25,11 @@ const MenuStyles = styled.div`
     align-items: center;
 
     &:hover {
-      background: #ababab66;
+      background: #f1f1f1;
     }
   }
   .menu-item.active {
-    background-color: #ababab;
+    background-color: #ff603f;
   }
 `;
 

@@ -20,7 +20,10 @@ const DataProvider = ({ children }) => {
     getAllTodos();
   };
 
-  const edit = (todo) => {};
+  const edit = (todo) => {
+    dataSource.Edit(todo);
+    getAllTodos();
+  };
 
   const setDone = (done) => {};
 

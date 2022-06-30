@@ -7,6 +7,7 @@ const FormStyles = styled.section`
     text-align: center;
     background-color: white;
     border-radius: 0.5rem;
+    border: 1px solid #f1f1f1;
     padding: 0 0.5rem 0 1rem;
     display: inline-flex;
     align-items: center;

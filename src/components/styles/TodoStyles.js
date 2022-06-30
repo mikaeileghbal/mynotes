@@ -22,6 +22,25 @@ const TodoStyles = styled.section`
     font-weight: lighter;
     font-size: 48px;
     color: #595959;
+    user-select: none;
+  }
+
+  textarea[name="text"] {
+    border: #f1f1f1;
+    font-family: "Roboto Slab", sans-serif;
+    font-weight: lighter;
+    font-size: 48px;
+    color: #595959;
+    height: 100%;
+  }
+
+  .date {
+    border: #f1f1f1;
+    font-family: "Roboto Slab", sans-serif;
+    font-weight: lighter;
+    font-size: 14px;
+    color: #595959;
+    margin-left: 0.5rem;
   }
 
   .footer {

@@ -5,7 +5,7 @@ import { Footer } from "../components";
 
 const menuItems = [
   { text: "Menu 1", id: 1 },
-  { text: "Meny 2", id: 2 },
+  { text: "Menu 2", id: 2 },
   { text: "Menu 3", id: 3 },
   { text: "Menu 4", id: 4 },
 ];
@@ -27,7 +27,11 @@ const MainMenu = () => {
           onClick={() => onClick(item.id)}
         >
           <FaArrowCircleRight
-            style={{ marginRight: "2.25rem", color: "#ffea00" }}
+            style={{
+              marginRight: "2.25rem",
+              color: "#595959",
+              fontSize: "18px",
+            }}
           />
           {item.text}
         </button>

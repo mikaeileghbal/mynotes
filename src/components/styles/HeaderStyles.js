@@ -52,7 +52,7 @@ const HeaderStyles = styled.div`
   }
 
   .input-group {
-    background-color: #ffea00;
+    background-color: #f1f1f1;
     border-radius: 0.5rem;
     padding: 0 0.5rem 0 1rem;
     display: inline-flex;
@@ -75,7 +75,7 @@ const HeaderStyles = styled.div`
     padding: 14px 10px;
     border: none;
     outline: none;
-    width: 500px;
+    width: 600px;
     transition: width 0.3s ease;
   }
 

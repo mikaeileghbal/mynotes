@@ -25,7 +25,7 @@ function DataSource() {
   };
 
   this.Edit = function (todo) {
-    todos = todos.map((t) => (t.id = todo.id ? todo : t));
+    todos = todos.map((t) => (t.id === todo.id ? todo : t));
     saveData();
   };
 
