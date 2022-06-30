@@ -30,6 +30,7 @@ function DataSource() {
   };
 
   this.SetDone = function (id, done) {
+    console.log(id);
     todos = todos.map((todo) =>
       todo.id === id ? { ...todo, done: done } : todo
     );

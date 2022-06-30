@@ -25,7 +25,10 @@ const DataProvider = ({ children }) => {
     getAllTodos();
   };
 
-  const setDone = (done) => {};
+  const setDone = (todo, done) => {
+    dataSource.SetDone(todo.id, done);
+    getAllTodos();
+  };
 
   const getAllTodos = () => {
     console.log("Loading data");

@@ -44,14 +44,17 @@ const TodoStyles = styled.section`
   }
 
   .footer {
-    padding: 0px 20px;
+    padding: 0px 10px;
     border-top: 2px dotted #8a8a8a54;
     opacity: 0.8;
+    display: flex;
+    align-items: center;
 
     span {
       line-height: 40px;
       font-size: 12px;
       color: #8a8a8a;
+      margin-left: 0.5rem;
     }
   }
 

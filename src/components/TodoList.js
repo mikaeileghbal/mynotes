@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaEdit, FaTimes, FaSave } from "react-icons/fa";
+import { FaEdit, FaTimes, FaSave, FaRegClock } from "react-icons/fa";
 import { useTodoContext } from "../api/DataProvider";
 import { getNoteBackColor, NoteBackColor } from "../helper";
 import TodoStyles, { TodoItemStyles } from "./styles/TodoStyles";
@@ -48,12 +48,25 @@ const TodoItem = ({ todo }) => {
     return <FaEdit />;
   };
 
+  const getBackColor = () => {
+    if (todo.done) return NoteBackColor.done;
+    return NoteBackColor.notdone;
+  };
+
+  const onClick = () => {
+    setDone(todo, !todo.done);
+  };
+
   return (
-    <div className="wrapper">
+    <div className="wrapper" onClick={() => onClick()}>
       {editMode && (
-        <TodoItemEdit todo={editItem} onInputChange={onInputChange} />
+        <TodoItemEdit
+          todo={editItem}
+          onInputChange={onInputChange}
+          bgColor={getBackColor()}
+        />
       )}
-      {!editMode && <TodoItemDisplay todo={todo} />}
+      {!editMode && <TodoItemDisplay todo={todo} bgColor={getBackColor()} />}
       <div className="button-wrapper">
         <button
           type="button"
@@ -74,20 +87,21 @@ const TodoItem = ({ todo }) => {
   );
 };
 
-function TodoItemDisplay({ todo }) {
+function TodoItemDisplay({ todo, bgColor }) {
   return (
-    <TodoItemStyles bgColor={NoteBackColor.events}>
+    <TodoItemStyles bgColor={bgColor}>
       <h4>{todo.text}</h4>
       <div className="footer">
+        <FaRegClock />
         <span>Reminder at 8:00 PM, Jun 19</span>
       </div>
     </TodoItemStyles>
   );
 }
 
-function TodoItemEdit({ todo, onInputChange }) {
+function TodoItemEdit({ todo, onInputChange, bgColor }) {
   return (
-    <TodoItemStyles bgColor={NoteBackColor.events}>
+    <TodoItemStyles bgColor={bgColor}>
       <textarea
         value={todo.text}
         name="text"
@@ -95,14 +109,15 @@ function TodoItemEdit({ todo, onInputChange }) {
         className="text"
       />
       <div className="footer">
+        <FaRegClock />
         <span>
-          Reminder at
-          <input
+          Reminder at 8:00 PM, Jun 19
+          {/* <input
             type="date"
             value="test"
             onChange={onInputChange}
             className="date"
-          />
+          /> */}
         </span>
       </div>
     </TodoItemStyles>

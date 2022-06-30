@@ -15,8 +15,8 @@ function random() {
 }
 
 const NoteBackColor = {
-  events: "#FFE900",
-  meetings: "#1CE8B5",
+  notdone: "#FFE900",
+  done: "#1CE8B5",
 };
 
 export { saveToStorage, loadFromStorage, isDataAvailable, NoteBackColor };
