@@ -41,7 +41,7 @@ const TodoItem = ({ todo }) => {
     setEditItem({ ...editItem, text: event.target.value });
   };
 
-  const { remove, setDone } = useTodoContext();
+  const { remove } = useTodoContext();
 
   const getEditButton = () => {
     if (editMode) return <FaSave />;
@@ -53,12 +53,8 @@ const TodoItem = ({ todo }) => {
     return NoteBackColor.notdone;
   };
 
-  const onClick = () => {
-    setDone(todo, !todo.done);
-  };
-
   return (
-    <div className="wrapper" onClick={() => onClick()}>
+    <div className="wrapper">
       {editMode && (
         <TodoItemEdit
           todo={editItem}
@@ -88,8 +84,14 @@ const TodoItem = ({ todo }) => {
 };
 
 function TodoItemDisplay({ todo, bgColor }) {
+  const { setDone } = useTodoContext();
+
+  const onClick = () => {
+    setDone(todo, !todo.done);
+  };
+
   return (
-    <TodoItemStyles bgColor={bgColor}>
+    <TodoItemStyles bgColor={bgColor} onClick={onClick}>
       <h4>{todo.text}</h4>
       <div className="footer">
         <FaRegClock />

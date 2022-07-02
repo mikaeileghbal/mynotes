@@ -6,17 +6,17 @@ const data = [
   },
   {
     id: "2",
-    text: "Lunch",
+    text: "Lunch at home",
     done: false,
   },
   {
     id: "3",
-    text: "Dinner",
+    text: "Dinner with friends",
     done: false,
   },
   {
     id: "4",
-    text: "Walking",
+    text: "Walking in the park",
     done: false,
   },
 ];
