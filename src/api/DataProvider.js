@@ -44,7 +44,6 @@ const DataProvider = ({ children }) => {
   }, []);
 
   useEffect(() => {
-    console.log("cancel in provider...");
     setTodos(dataSource.SearchTodo(searchTerm));
   }, [searchTerm]);
 

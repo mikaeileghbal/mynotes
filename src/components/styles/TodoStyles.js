@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const TodoStyles = styled.section`
   .row {
+    min-height: 52vh;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr;

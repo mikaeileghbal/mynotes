@@ -2,7 +2,7 @@ import React from "react";
 import GlobalStyles from "./components/styles/GlobalStyles";
 
 import DataSource from "./api/dataSource";
-import { Header, TodoList, MainMenu, Form } from "./components";
+import { Header, TodoList, MainMenu, Form, Footer } from "./components";
 import DataProvider from "./api/DataProvider";
 
 const App = () => {
@@ -13,8 +13,9 @@ const App = () => {
         {/* <Form add={add} edit={edit} />
         <TodoList todos={todos} remove={remove} setDone={setDone} edit={edit} /> */}
         <Form />
-        <MainMenu />
+        {/* <MainMenu /> */}
         <TodoList />
+        <Footer />
       </GlobalStyles>
     </DataProvider>
   );

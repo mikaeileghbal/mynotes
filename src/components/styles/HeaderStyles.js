@@ -64,7 +64,7 @@ const HeaderStyles = styled.div`
   input:-webkit-autofill:hover,
   input:-webkit-autofill:focus,
   input:-webkit-autofill:active {
-    -webkit-box-shadow: 0 0 0 30px #ffea00 inset !important;
+    -webkit-box-shadow: 0 0 0 30px #f1f1f1 inset !important;
     -webkit-text-fill-color: black;
     border: none;
   }
