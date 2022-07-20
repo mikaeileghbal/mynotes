@@ -4,18 +4,27 @@ const HeaderStyles = styled.div`
   header {
     z-index: 10;
     background-color: white;
-    padding: 0.6rem 2rem;
+    padding: 0.5rem 0.5rem;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     position: fixed;
     width: 100%;
     display: grid;
-    grid-template-columns: 150px 1fr 150px;
+    grid-template-columns: 1fr;
     align-items: center;
+
+    @media screen and (min-width: 768px) {
+      grid-template-columns: 150px 1fr 150px;
+      padding: 0.6rem 2rem;
+    }
   }
 
   section {
     text-align: center;
-    padding-top: 3em;
+    padding-top: 5em;
+
+    @media sceen and (min-width: 768px) {
+      padding-top: 3em;
+    }
   }
 
   h1 {
@@ -31,9 +40,13 @@ const HeaderStyles = styled.div`
   h2 {
     font-family: "Open Sans", sans-serif;
     color: #8a8a8a;
-    font-size: 36px;
+    font-size: 26px;
     font-weight: 300;
     padding: 45px 0 22px;
+
+    @media screen and (min-width: 768px) {
+      font-size: 36px;
+    }
   }
 
   p {
@@ -75,8 +88,12 @@ const HeaderStyles = styled.div`
     padding: 14px 10px;
     border: none;
     outline: none;
-    width: 600px;
+    width: 250px;
     transition: width 0.3s ease;
+
+    @media screen and (min-width: 920px) {
+      width: 600px;
+    }
   }
 
   input:focus {

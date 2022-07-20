@@ -15,12 +15,25 @@ const FooterStyles = styled.footer`
 
   ul {
     list-style-type: none;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 600px) {
+      flex-direction: row;
+    }
 
     li {
       display: inline-block;
       margin: 0 0.8rem;
       color: #8a8afa;
       user-select: none;
+    }
+
+    li + li {
+      margin-top: 0.5em;
+      @media screen and (min-width: 580px) {
+        margin-top: 0;
+      }
     }
   }
 

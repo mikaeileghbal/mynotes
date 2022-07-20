@@ -32,8 +32,12 @@ const FormStyles = styled.section`
     padding: 14px 10px;
     border: none;
     outline: none;
-    width: 500px;
+    width: 300px;
     transition: width 0.3s ease;
+
+    @media screen and (min-width: 768px) {
+      width: 500px;
+    }
   }
 `;
 
